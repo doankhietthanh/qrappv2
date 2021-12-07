@@ -36,8 +36,8 @@ const Scanner = ({token, setToken}) => {
     <>
       <QRCodeScanner
         ref={cameraRef}
+        flashMode={RNCamera.Constants.FlashMode.off}
         onRead={onSuccess}
-        flashMode={RNCamera.Constants.FlashMode.torch}
       />
       {enReScan && (
         <Button
